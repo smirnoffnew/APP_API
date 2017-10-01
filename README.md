@@ -1,7 +1,3 @@
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
-
 ## API_APP
 
 needs:
@@ -20,18 +16,12 @@ needs:
 ## Urls:
 
 ###Register user
-
 ####request post http://localhost:8000/api/register
-body form-data 
-
-name "asdf"
-
-email "asdf@asdf.asdf"
-
-password asdfasdf
-
-c_password asdfasdf
-
+- body form-data 
+- name "asdf"
+- email "asdf@asdf.asdf"
+- password asdfasdf
+- c_password asdfasdf
 ####response 
 {
     "success": {
@@ -39,37 +29,31 @@ c_password asdfasdf
         "name": "asdfasdf"
     }
 }
-
-This token we will must attach to each of your requests.
-![alt text](http://joxi.ru/1A5XPazfnWjyg2)
+- This token we will must attach to each of your requests.
 
 
 ###Login user
 ####request post http://localhost:8000/api/login
-headers:
-"key":"Content-Type", "value":"application/x-www-form-urlencoded"
-
-body x-www-form-urlencoded
-"key":"email",  "value":"asdf@asdf.asdf"
-"key":"password",  "value":"asdfasdf"
- 
-
+#####headers:
+- "key":"Content-Type", "value":"application/x-www-form-urlencoded"
+#####body x-www-form-urlencoded:
+- "key":"email",  "value":"asdf@asdf.asdf"
+- "key":"password",  "value":"asdfasdf"
 ####response 
 {
     "success": {
         "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImY1OGQyODM4MTI2YjkzMDEyYWY3M2Q1YTgyMjBiNDI0NzRkYzg4YjdiMjYwYmRlMmE1OGEzMTRiNTJiMzkwOWQyNDRjYzk3Njk3ODJjNWI2In0.eyJhdWQiOiIxIiwianRpIjoiZjU4ZDI4MzgxMjZiOTMwMTJhZjczZDVhODIyMGI0MjQ3NGRjODhiN2IyNjBiZGUyYTU4YTMxNGI1MmIzOTA5ZDI0NGNjOTc2OTc4MmM1YjYiLCJpYXQiOjE1MDY4OTg2OTgsIm5iZiI6MTUwNjg5ODY5OCwiZXhwIjoxNTM4NDM0Njk4LCJzdWIiOiI1Iiwic2NvcGVzIjpbXX0.AeVI3Zc0F-nXnVehlKv5GdCnQooitawVvMNmjjKXhijkcdDeNgvDbRYMy4FPhA2DfcAB8uc2ntrsOA_d1EOO6fHwmM5G-HHyZO5DLm6kzVfvhcHAwzlPWTDikY60Buosf32yDwKd-JA6o301MuIwJ-SmN14D6aHqn0iHJqe_YTXHgM5enwiGy3n5l4375A4OrYiZSbKVwpxiDsx9HM9tXY2E7pFQ3smHTydyeLm6L5il-hBD5o4vi0SXL_OMuBjqQJmu4qHTn4alc5fsnTcOqLe1M2tjR1-CHkYGLec9K8syV7akiI722Anmi8EOTFDXuTEDHUsPbnCPd3JtTeY5taLX38Z6pzD1TYwI-dAxOTpKT1dMPlDPwL5VEu5VKXadsUy8hph9972YDm9JAPgfyH3kc0xo3y7F6WDkVaXUQtAjPVf9eNKoseTWyLa9lPo3tcGW_onDnoqK8YYFxykpuq6vpgkUJeXM6HlBfOL6xHEEWZ--z3q0GDSvp3N2Ckhoi5bCX1v3MkxopYFxmkZlz0ZEdMsCefbAmPNFjzItcDH-g4cNH5VDAMtbu7i0iHathXY6yLBcWhOhfyaupMtNUV8UfqgXY8e_UEudumrle_3FT-oxw_XTOHeotPTxMUS6apW9NVaq-zK0DgbDw3eOmivaTIUe-kJkuQlJsdZ7KIc"
     }
 }
+- This token we will must attach to each of your requests.
 
-This token we will must attach to each of your requests.
 
 ###Details of user  (test for is user logged)
 ####request post http://localhost:8000/api/details
-headers:
-"key":"Accept", "value":"application/json"
-"key":"Authorization", "value":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImZhZmM0ODcwODgwNjA4YTM2YzExOTczOWM1YTdiMjYzZWIyZTgyZGNhOTk4ZmYwNTA4OWM5ZmU2M2VlZGViNWIyMjU1ZmJiZjcxMjA1NzE5In0.eyJhdWQiOiIxIiwianRpIjoiZmFmYzQ4NzA4ODA2MDhhMzZjMTE5NzM5YzVhN2IyNjNlYjJlODJkY2E5OThmZjA1MDg5YzlmZTYzZWVkZWI1YjIyNTVmYmJmNzEyMDU3MTkiLCJpYXQiOjE1MDY4MTA5NjksIm5iZiI6MTUwNjgxMDk2OSwiZXhwIjoxNTM4MzQ2OTY5LCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.sYtW97LZPTBd5MmO1exUAvbOUzgosEeskTYbp8yoaL7UBepBziT1LS-cayYQFUuYmkXmuviBK39qPUqB3-lLTq02YBFa7KA235LPpteObd6SpowbIw7Iq_m0SRGA0tzGJqCPMWpC-Hc0w5tYA6Chc9ka7fJoE1y0SdIP5f5Z5CRCHUIJ0686bpQPk5iWqpm-USh24zw5SNM-yswZLUxrjML10t9q2039pTNkd4A9HAg6Dp-ItU8pRydTZAHgDmoB7bpMo8L0b_IWWSFjzC9Aa6BYECuPxxRdXMK6x9YPp5luM-Uu7aEKx1jBvH9g1l_MXC2JY82dyC9C4rRPUbQzBSaRAZTNGi4hJwUSGgp4WEcsyrRyl5AShQnzz1JxBQd5vvurwhKQCx4pLFmSEv0qHGNt3MjCrLSDWtQouEZwYgTIoe6CPHUjLdM-s6CLfipfsKrjPmqZFRGReCO7v3Ag4U7DqN5GvRc8ruWg3HOgXWvsv2TvD04gYPPvjnMaOfCs-IReCdNbPMXqs-BnhnfkXELXuOv-4T6n6yi3_xEL-VcqsR_K2F-DwUiTb8tLf9lZB5lujOPctvRBRIe_d8ptKDODfwgIdLmdHVFuHkcCXbos1Vng4kN1OftmzNhwYIwPDuBGFI9H8k07_ZpSCAG0rDBBRX-g8XykmeaZmzuAINU"
-"key":"Content-Type", "value":"application/x-www-form-urlencoded"
-
+#####headers:
+- "key":"Accept", "value":"application/json"
+- "key":"Authorization", "value":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImZhZmM0ODcwODgwNjA4YTM2YzExOTczOWM1YTdiMjYzZWIyZTgyZGNhOTk4ZmYwNTA4OWM5ZmU2M2VlZGViNWIyMjU1ZmJiZjcxMjA1NzE5In0.eyJhdWQiOiIxIiwianRpIjoiZmFmYzQ4NzA4ODA2MDhhMzZjMTE5NzM5YzVhN2IyNjNlYjJlODJkY2E5OThmZjA1MDg5YzlmZTYzZWVkZWI1YjIyNTVmYmJmNzEyMDU3MTkiLCJpYXQiOjE1MDY4MTA5NjksIm5iZiI6MTUwNjgxMDk2OSwiZXhwIjoxNTM4MzQ2OTY5LCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.sYtW97LZPTBd5MmO1exUAvbOUzgosEeskTYbp8yoaL7UBepBziT1LS-cayYQFUuYmkXmuviBK39qPUqB3-lLTq02YBFa7KA235LPpteObd6SpowbIw7Iq_m0SRGA0tzGJqCPMWpC-Hc0w5tYA6Chc9ka7fJoE1y0SdIP5f5Z5CRCHUIJ0686bpQPk5iWqpm-USh24zw5SNM-yswZLUxrjML10t9q2039pTNkd4A9HAg6Dp-ItU8pRydTZAHgDmoB7bpMo8L0b_IWWSFjzC9Aa6BYECuPxxRdXMK6x9YPp5luM-Uu7aEKx1jBvH9g1l_MXC2JY82dyC9C4rRPUbQzBSaRAZTNGi4hJwUSGgp4WEcsyrRyl5AShQnzz1JxBQd5vvurwhKQCx4pLFmSEv0qHGNt3MjCrLSDWtQouEZwYgTIoe6CPHUjLdM-s6CLfipfsKrjPmqZFRGReCO7v3Ag4U7DqN5GvRc8ruWg3HOgXWvsv2TvD04gYPPvjnMaOfCs-IReCdNbPMXqs-BnhnfkXELXuOv-4T6n6yi3_xEL-VcqsR_K2F-DwUiTb8tLf9lZB5lujOPctvRBRIe_d8ptKDODfwgIdLmdHVFuHkcCXbos1Vng4kN1OftmzNhwYIwPDuBGFI9H8k07_ZpSCAG0rDBBRX-g8XykmeaZmzuAINU"
+- "key":"Content-Type", "value":"application/x-www-form-urlencoded"
 ####response 
 {
     "success": {
@@ -80,7 +64,6 @@ headers:
         "updated_at": "2017-09-30 19:15:19"
     }
 }
-
 ####bad response 
 {
     "error": "Unauthenticated."
@@ -89,11 +72,10 @@ headers:
 
 ###Logout user
 ####request post http://localhost:8000/api/logout
-headers:
-"key":"Accept", "value":"application/json"
-"key":"Authorization", "value":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImZhZmM0ODcwODgwNjA4YTM2YzExOTczOWM1YTdiMjYzZWIyZTgyZGNhOTk4ZmYwNTA4OWM5ZmU2M2VlZGViNWIyMjU1ZmJiZjcxMjA1NzE5In0.eyJhdWQiOiIxIiwianRpIjoiZmFmYzQ4NzA4ODA2MDhhMzZjMTE5NzM5YzVhN2IyNjNlYjJlODJkY2E5OThmZjA1MDg5YzlmZTYzZWVkZWI1YjIyNTVmYmJmNzEyMDU3MTkiLCJpYXQiOjE1MDY4MTA5NjksIm5iZiI6MTUwNjgxMDk2OSwiZXhwIjoxNTM4MzQ2OTY5LCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.sYtW97LZPTBd5MmO1exUAvbOUzgosEeskTYbp8yoaL7UBepBziT1LS-cayYQFUuYmkXmuviBK39qPUqB3-lLTq02YBFa7KA235LPpteObd6SpowbIw7Iq_m0SRGA0tzGJqCPMWpC-Hc0w5tYA6Chc9ka7fJoE1y0SdIP5f5Z5CRCHUIJ0686bpQPk5iWqpm-USh24zw5SNM-yswZLUxrjML10t9q2039pTNkd4A9HAg6Dp-ItU8pRydTZAHgDmoB7bpMo8L0b_IWWSFjzC9Aa6BYECuPxxRdXMK6x9YPp5luM-Uu7aEKx1jBvH9g1l_MXC2JY82dyC9C4rRPUbQzBSaRAZTNGi4hJwUSGgp4WEcsyrRyl5AShQnzz1JxBQd5vvurwhKQCx4pLFmSEv0qHGNt3MjCrLSDWtQouEZwYgTIoe6CPHUjLdM-s6CLfipfsKrjPmqZFRGReCO7v3Ag4U7DqN5GvRc8ruWg3HOgXWvsv2TvD04gYPPvjnMaOfCs-IReCdNbPMXqs-BnhnfkXELXuOv-4T6n6yi3_xEL-VcqsR_K2F-DwUiTb8tLf9lZB5lujOPctvRBRIe_d8ptKDODfwgIdLmdHVFuHkcCXbos1Vng4kN1OftmzNhwYIwPDuBGFI9H8k07_ZpSCAG0rDBBRX-g8XykmeaZmzuAINU"
-"key":"Content-Type", "value":"application/x-www-form-urlencoded"
-
+#####headers:
+- "key":"Accept", "value":"application/json"
+- "key":"Authorization", "value":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImZhZmM0ODcwODgwNjA4YTM2YzExOTczOWM1YTdiMjYzZWIyZTgyZGNhOTk4ZmYwNTA4OWM5ZmU2M2VlZGViNWIyMjU1ZmJiZjcxMjA1NzE5In0.eyJhdWQiOiIxIiwianRpIjoiZmFmYzQ4NzA4ODA2MDhhMzZjMTE5NzM5YzVhN2IyNjNlYjJlODJkY2E5OThmZjA1MDg5YzlmZTYzZWVkZWI1YjIyNTVmYmJmNzEyMDU3MTkiLCJpYXQiOjE1MDY4MTA5NjksIm5iZiI6MTUwNjgxMDk2OSwiZXhwIjoxNTM4MzQ2OTY5LCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.sYtW97LZPTBd5MmO1exUAvbOUzgosEeskTYbp8yoaL7UBepBziT1LS-cayYQFUuYmkXmuviBK39qPUqB3-lLTq02YBFa7KA235LPpteObd6SpowbIw7Iq_m0SRGA0tzGJqCPMWpC-Hc0w5tYA6Chc9ka7fJoE1y0SdIP5f5Z5CRCHUIJ0686bpQPk5iWqpm-USh24zw5SNM-yswZLUxrjML10t9q2039pTNkd4A9HAg6Dp-ItU8pRydTZAHgDmoB7bpMo8L0b_IWWSFjzC9Aa6BYECuPxxRdXMK6x9YPp5luM-Uu7aEKx1jBvH9g1l_MXC2JY82dyC9C4rRPUbQzBSaRAZTNGi4hJwUSGgp4WEcsyrRyl5AShQnzz1JxBQd5vvurwhKQCx4pLFmSEv0qHGNt3MjCrLSDWtQouEZwYgTIoe6CPHUjLdM-s6CLfipfsKrjPmqZFRGReCO7v3Ag4U7DqN5GvRc8ruWg3HOgXWvsv2TvD04gYPPvjnMaOfCs-IReCdNbPMXqs-BnhnfkXELXuOv-4T6n6yi3_xEL-VcqsR_K2F-DwUiTb8tLf9lZB5lujOPctvRBRIe_d8ptKDODfwgIdLmdHVFuHkcCXbos1Vng4kN1OftmzNhwYIwPDuBGFI9H8k07_ZpSCAG0rDBBRX-g8XykmeaZmzuAINU"
+- "key":"Content-Type", "value":"application/x-www-form-urlencoded"
 ####success response 
 {
     "success": {
@@ -108,7 +90,6 @@ headers:
         "expires_at": "2018-10-01 22:58:18"
     }
 }
-
 ####bad response 
 {
     "error": "Unauthenticated."
