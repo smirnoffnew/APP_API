@@ -8,7 +8,16 @@ needs:
 - git clone https://github.com/smirnoffnew/APP_API.git
 - cd API_APP
 - composer install
+- php artisan migrate
 - php artisan passport:install
+
+## DataBase
+- CONNECTION=mysql
+- HOST=127.0.0.1
+- PORT=3306
+- DATABASE=api_app
+- USERNAME=root
+- PASSWORD=root
 
 ## Serve
 - php artisan serve
