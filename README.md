@@ -27,12 +27,12 @@ needs:
 #### response 
 {
     "success": {
-        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOPQ4Y2MRo6iX1eUxxnJ9IPadk",
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOPQ4Y2MRo6iX1eUxxnJ9IPadk !!example token!!",
         "name": "asdfasdf"
     }
 }
 - This token we will must attach to each of your requests.
-example http://joxi.ru/1A5XPazfnWjyg2
+- example http://joxi.ru/1A5XPazfnWjyg2
 
 
 ### Login user
@@ -49,11 +49,11 @@ example http://joxi.ru/1A5XPazfnWjyg2
 #### response 
 {
     "success": {
-        "token": "eyJ0eXAiOiJKV1QiDw3eOmivaTIUe-kJkuQlJsdZ7KIc"
+        "token": "eyJ0eXAiOiJKV1QiDw3eOmivaTIUe-kJkuQlJsdZ7KIc !!example token!!"
     }
 }
 - This token we will must attach to each of your requests.
-example http://joxi.ru/Vm69PRQIDkp80r
+- example http://joxi.ru/Vm69PRQIDkp80r
 
 
 ### Details of user  (test for is user logged)
@@ -62,7 +62,7 @@ example http://joxi.ru/Vm69PRQIDkp80r
 
 ##### headers:
 - "key":"Accept", "value":"application/json"
-- "key":"Authorization", "value":"Bearer eyJ0eXAiOiJKV1QiLCJhbmeaZmzuAINU"
+- "key":"Authorization", "value":"Bearer eyJ0eXAiOiJKV1QiLCJhbmeaZmzuAINU !!example token!!"
 - "key":"Content-Type", "value":"application/x-www-form-urlencoded"
 
 #### response 
@@ -80,7 +80,7 @@ example http://joxi.ru/Vm69PRQIDkp80r
 {
     "error": "Unauthenticated."
 }
-example http://joxi.ru/5mdvJ37fk5zL0A
+- example http://joxi.ru/5mdvJ37fk5zL0A
 
 
 ### Logout user
@@ -111,4 +111,4 @@ example http://joxi.ru/5mdvJ37fk5zL0A
 {
     "error": "Unauthenticated."
 }
-example http://joxi.ru/Q2KLNBpI4RlEWA
+- example http://joxi.ru/Q2KLNBpI4RlEWA
