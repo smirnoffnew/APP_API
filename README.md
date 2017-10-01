@@ -41,6 +41,7 @@ c_password asdfasdf
 }
 
 This token we will must attach to each of your requests.
+![alt text](http://joxi.ru/1A5XPazfnWjyg2)
 
 
 ###Login user
