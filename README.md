@@ -16,12 +16,14 @@ needs:
 ## Urls:
 
 ###Register user
+
 ####request post http://localhost:8000/api/register
 - body form-data 
 - name "asdf"
 - email "asdf@asdf.asdf"
 - password asdfasdf
 - c_password asdfasdf
+
 ####response 
 {
     "success": {
@@ -34,12 +36,16 @@ example http://joxi.ru/1A5XPazfnWjyg2
 
 
 ###Login user
+
 ####request post http://localhost:8000/api/login
+
 #####headers:
 - "key":"Content-Type", "value":"application/x-www-form-urlencoded"
+
 #####body x-www-form-urlencoded:
 - "key":"email",  "value":"asdf@asdf.asdf"
 - "key":"password",  "value":"asdfasdf"
+
 ####response 
 {
     "success": {
@@ -51,11 +57,14 @@ example http://joxi.ru/Vm69PRQIDkp80r
 
 
 ###Details of user  (test for is user logged)
+
 ####request post http://localhost:8000/api/details
+
 #####headers:
 - "key":"Accept", "value":"application/json"
 - "key":"Authorization", "value":"Bearer eyJ0eXAiOiJKV1QiLCJhbmeaZmzuAINU"
 - "key":"Content-Type", "value":"application/x-www-form-urlencoded"
+
 ####response 
 {
     "success": {
@@ -66,6 +75,7 @@ example http://joxi.ru/Vm69PRQIDkp80r
         "updated_at": "2017-09-30 19:15:19"
     }
 }
+
 ####bad response 
 {
     "error": "Unauthenticated."
@@ -74,11 +84,14 @@ example http://joxi.ru/5mdvJ37fk5zL0A
 
 
 ###Logout user
+
 ####request post http://localhost:8000/api/logout
+
 #####headers:
 - "key":"Accept", "value":"application/json"
 - "key":"Authorization", "value":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSU"
 - "key":"Content-Type", "value":"application/x-www-form-urlencoded"
+
 ####success response 
 {
     "success": {
@@ -93,6 +106,7 @@ example http://joxi.ru/5mdvJ37fk5zL0A
         "expires_at": "2018-10-01 22:58:18"
     }
 }
+
 ####bad response 
 {
     "error": "Unauthenticated."
