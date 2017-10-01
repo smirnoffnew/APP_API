@@ -30,6 +30,7 @@ needs:
     }
 }
 - This token we will must attach to each of your requests.
+example http://joxi.ru/1A5XPazfnWjyg2
 
 
 ###Login user
@@ -46,6 +47,7 @@ needs:
     }
 }
 - This token we will must attach to each of your requests.
+example http://joxi.ru/Vm69PRQIDkp80r
 
 
 ###Details of user  (test for is user logged)
@@ -68,6 +70,7 @@ needs:
 {
     "error": "Unauthenticated."
 }
+example http://joxi.ru/5mdvJ37fk5zL0A
 
 
 ###Logout user
@@ -94,4 +97,4 @@ needs:
 {
     "error": "Unauthenticated."
 }
-
+example http://joxi.ru/Q2KLNBpI4RlEWA
