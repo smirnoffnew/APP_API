@@ -17,14 +17,14 @@ needs:
 
 ###Register user
 
-####request post http://localhost:8000/api/register
+#### request post http://localhost:8000/api/register
 - body form-data 
 - name "asdf"
 - email "asdf@asdf.asdf"
 - password asdfasdf
 - c_password asdfasdf
 
-####response 
+#### response 
 {
     "success": {
         "token": "eyJ0eXAiOiJKV1QiLCJhbGciOPQ4Y2MRo6iX1eUxxnJ9IPadk",
@@ -35,18 +35,18 @@ needs:
 example http://joxi.ru/1A5XPazfnWjyg2
 
 
-###Login user
+### Login user
 
-####request post http://localhost:8000/api/login
+#### request post http://localhost:8000/api/login
 
-#####headers:
+##### headers:
 - "key":"Content-Type", "value":"application/x-www-form-urlencoded"
 
-#####body x-www-form-urlencoded:
+##### body x-www-form-urlencoded:
 - "key":"email",  "value":"asdf@asdf.asdf"
 - "key":"password",  "value":"asdfasdf"
 
-####response 
+#### response 
 {
     "success": {
         "token": "eyJ0eXAiOiJKV1QiDw3eOmivaTIUe-kJkuQlJsdZ7KIc"
@@ -56,16 +56,16 @@ example http://joxi.ru/1A5XPazfnWjyg2
 example http://joxi.ru/Vm69PRQIDkp80r
 
 
-###Details of user  (test for is user logged)
+### Details of user  (test for is user logged)
 
-####request post http://localhost:8000/api/details
+#### request post http://localhost:8000/api/details
 
-#####headers:
+##### headers:
 - "key":"Accept", "value":"application/json"
 - "key":"Authorization", "value":"Bearer eyJ0eXAiOiJKV1QiLCJhbmeaZmzuAINU"
 - "key":"Content-Type", "value":"application/x-www-form-urlencoded"
 
-####response 
+#### response 
 {
     "success": {
         "id": 3,
@@ -76,23 +76,23 @@ example http://joxi.ru/Vm69PRQIDkp80r
     }
 }
 
-####bad response 
+#### bad response 
 {
     "error": "Unauthenticated."
 }
 example http://joxi.ru/5mdvJ37fk5zL0A
 
 
-###Logout user
+### Logout user
 
-####request post http://localhost:8000/api/logout
+#### request post http://localhost:8000/api/logout
 
-#####headers:
+##### headers:
 - "key":"Accept", "value":"application/json"
 - "key":"Authorization", "value":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSU"
 - "key":"Content-Type", "value":"application/x-www-form-urlencoded"
 
-####success response 
+#### success response 
 {
     "success": {
         "id": "f58d2838126b93012af73d5a8220b42474dc88b7b260bde2a58a314b52b3909d244cc9769782c5b6",
@@ -107,7 +107,7 @@ example http://joxi.ru/5mdvJ37fk5zL0A
     }
 }
 
-####bad response 
+#### bad response 
 {
     "error": "Unauthenticated."
 }
